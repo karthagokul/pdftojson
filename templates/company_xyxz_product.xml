@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <meta>
+        <name>Blah</name>
+        <year>2023</year>
+        <customer>XYZ</customer>
+        <project>Blah</project>
+    </meta>
+    <fields>
+        <field label="Client name:" name="customer_name" line="2"/>
+        <field label="laboratory:" name="registry_number" line="5"/>
+        <field label="Sample name:" name="sample_name" line="5" strip_at_token="N.I laboratory:"/>
+        <field label="Date of delivery:" name="receiption_date" line="3" strip_at="0" type="date" date_format="%d-%m-%Y"/>
+        <field label="Type of sample:" name="sample_type" line="3" strip_at="0"/>
+        <field label="Date of analysis:" name="start_date" line="4" strip_at="0" type="date" date_format="%d-%m-%Y"/>
+        <field label="Date of analysis:" name="finish_date" line="4" strip_at="0" type="date" date_format="%d-%m-%Y"/>
+        <parallel-row name="result" patterns="THC CBD THCA CBDA CBGA CBG CBN" line="8" empty_values="method mg"/>
+    </fields>
+</template>
